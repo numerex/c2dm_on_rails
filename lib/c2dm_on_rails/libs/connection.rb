@@ -1,4 +1,4 @@
-require 'gdata'
+require 'gdata_19'
 require 'net/https'
 require 'uri'
 
