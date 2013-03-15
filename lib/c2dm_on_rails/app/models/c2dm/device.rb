@@ -8,8 +8,10 @@
 # 
 # Example:
 #   Device.create(:registration_id => 'FOOBAR')
-class C2dm::Device < C2dm::Base
-  
+class C2dm::Device < ActiveRecord::Base
+
+  set_table_name 'c2dm_devices'
+
   has_many :notifications, :class_name => 'C2dm::Notification', :dependent => :destroy
 
   attr_accessible :registration_id
