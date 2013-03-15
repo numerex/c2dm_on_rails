@@ -10,7 +10,11 @@
 #   Device.create(:registration_id => 'FOOBAR')
 class C2dm::Device < ActiveRecord::Base
 
-  set_table_name 'c2dm_devices'
+  if Rails.version > '3.0'
+    self.table_name = 'c2dm_devices'
+  else
+    set_table_name 'c2dm_devices'
+  end
 
   has_many :notifications, :class_name => 'C2dm::Notification', :dependent => :destroy
 

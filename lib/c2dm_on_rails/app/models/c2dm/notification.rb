@@ -20,7 +20,11 @@ class C2dm::Notification < ActiveRecord::Base
   extend ::ActionView::Helpers::TextHelper
   serialize :data
 
-  set_table_name 'c2dm_notifications'
+  if Rails.version > '3.0'
+    self.table_name = 'c2dm_notifications'
+  else
+    set_table_name 'c2dm_notifications'
+  end
 
   belongs_to :device, :class_name => 'C2dm::Device'
 
