@@ -21,7 +21,9 @@ class C2dm::Notification < C2dm::Base
   serialize :data
   
   belongs_to :device, :class_name => 'C2dm::Device'
-  
+
+  attr_accessible :data,:collapse_key
+
   class << self
     
     # Opens a connection to the Google C2dm server and attempts to batch deliver

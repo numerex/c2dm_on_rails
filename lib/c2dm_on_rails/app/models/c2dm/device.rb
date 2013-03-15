@@ -11,6 +11,8 @@
 class C2dm::Device < C2dm::Base
   
   has_many :notifications, :class_name => 'C2dm::Notification', :dependent => :destroy
+
+  attr_accessible :registration_id
   
   validates_presence_of :registration_id
   validates_uniqueness_of :registration_id
