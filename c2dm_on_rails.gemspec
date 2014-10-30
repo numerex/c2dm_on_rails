@@ -1,3 +1,4 @@
+$:.push File.expand_path('../lib', __FILE__)
 require 'c2dm_on_rails/version'
 
 Gem::Specification.new do |s|
