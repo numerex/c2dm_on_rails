@@ -1,0 +1,15 @@
+= Changelog
+
+1.0.1
+* Expand path before requiring the version on the gemspec
+
+1.0.0
+* Add compatibility with Rails 4
+* Remove compatibility with Rails 2
+* Remove attribute accessible from C2dm::Device and C2dm::Notification
+
+0.1.6
+* Encoding for data values. Scandinavian characters now working.
+
+0.1.5
+* Initial release
